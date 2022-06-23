@@ -1,14 +1,11 @@
 <template>
   <!-- Item container -->
   <div class="item">
+    <!-- Title -->
+    <h1 class="title">{{ item.title }}</h1>
+
     <!-- Picture -->
     <img :src="item.image" alt="" />
-
-    <!-- Brand -->
-    <ais-highlight class="brand" attribute="brand" :hit="item" />
-
-    <!-- Name -->
-    <ais-highlight class="title" attribute="name" :hit="item" />
   </div>
 </template>
 
@@ -25,7 +22,7 @@ export default {
   align-items: center;
   justify-content: center;
 
-  gap: 0.3rem;
+  gap: 1rem;
 
   align-items: center;
 
@@ -34,23 +31,18 @@ export default {
 
   background-color: white;
 
-  padding: 1rem;
+  padding-top: 1rem;
 
   box-shadow: 0 0 4px 1px rgb(148, 148, 148, 0.2);
 
-  img {
-    margin-bottom: 0.3rem;
-  }
-
-  .brand {
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
-
   .title {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-inline: 1rem;
+  }
+
+  img {
+    width: 100%;
   }
 }
 </style>
