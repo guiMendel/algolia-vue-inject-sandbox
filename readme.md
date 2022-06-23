@@ -116,10 +116,10 @@ There's a couple of things to be commented on this method.
 Now that we are properly armed, let us finally apply the injection:
 
 ```jsx
-<div v-for="hit in inject(queryResults, injectContent)" :key="hit.objectID">
+<template v-for="hit in inject(queryResults, injectContent)" :key="hit.objectID">
 	<InjectedContent v-if="hit.isInjectedContent" :hit="hit" />
 	<QueryResult v-else :hit="hit" />
-</div>
+</template>
 ```
 
 > The `InjectedContent` component is just responsible for displaying the inject content's properties.
